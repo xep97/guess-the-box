@@ -1,0 +1,97 @@
+        :root {
+            --primary: #6366f1;
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f8fafc;
+            --accent: #22c55e;
+            --error: #ef4444;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        #setup-screen, #game-screen {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .box-grid {
+            display: grid;
+            gap: 15px;
+            margin: 2rem 0;
+            justify-content: center;
+        }
+
+        .box {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.1s, background 0.2s, filter 0.2s;
+        }
+
+        .box:hover { transform: scale(1.05); filter: brightness(1.1); }
+        .box:active { transform: scale(0.95); }
+
+        input, select, button {
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            margin: 5px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        button {
+            background: var(--primary);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        button:hover { opacity: 0.9; }
+
+        .leaderboard-table {
+            width: 100%;
+            margin-top: 2rem;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .leaderboard-table th, .leaderboard-table td {
+            padding: 12px;
+            border-bottom: 1px solid #334155;
+        }
+
+        .is-me { 
+            background: rgba(99, 102, 241, 0.2); 
+            color: #818cf8; 
+            font-weight: bold; 
+        }
+
+        .streak-display {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0.5rem 0;
+            color: var(--accent);
+        }

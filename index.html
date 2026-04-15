@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the box</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+
+<div class="container">
+    <h1>Guess the box</h1>
+
+    <div id="setup-screen">
+        <h3>Enter your name to play</h3>
+        <input type="text" id="username-input" placeholder="Your Name...">
+        <button onclick="initUser()">Start Game</button>
+    </div>
+
+    <div id="game-screen" style="display:none;">
+        <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <span id="player-welcome" style="opacity: 0.8;"></span>
+            <div>
+                Difficulty: 
+                <select id="diff-select" onchange="resetGame()">
+                    <option value="2">2 Boxes</option>
+                    <option value="3" selected>3 Boxes</option>
+                    <option value="5">5 Boxes</option>
+                    <option value="10">10 Boxes</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="streak-display" id="streak-count">0</div>
+        <div style="margin-bottom: 1rem; opacity: 0.7;">Current Streak</div>
+
+        <div id="box-container" class="box-grid"></div>
+
+        <hr style="border: 0; border-top: 1px solid #334155; margin: 2rem 0;">
+
+        <h3>Global Top 10</h3>
+        <table class="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Streak</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-body">
+                <tr><td colspan="3" style="text-align:center;">Loading scores...</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+</body>
+</html>
