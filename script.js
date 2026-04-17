@@ -28,7 +28,7 @@
     function showGame() {
         document.getElementById('setup-screen').style.display = 'none';
         document.getElementById('game-screen').style.display = 'block';
-        document.getElementById('player-welcome').innerText = `👋 ${username}`;
+        document.getElementById('player-welcome').innerText = `Playing as ${username}`;
         resetGame();
     }
 
