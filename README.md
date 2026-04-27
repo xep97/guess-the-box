@@ -19,3 +19,4 @@ A series of boxes are presented on the screen. Only one box contains the prize a
 ## Tech Stack
 
 Project is made in standard HTML, CSS and JavaScript.  
+Supabase is used for storing high scores.  
